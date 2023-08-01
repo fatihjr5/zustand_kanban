@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { create } from 'zustand';
 
-const status = create(() => ({
-    task: [{ title: "uji", state: "Perencanaan" }],
+const useStore = create((set) => ({
+  task: [{ title: "Kanban", state: "Perencanaan" }],
 }));
 
-export default status
+export default useStore;
