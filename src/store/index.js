@@ -5,7 +5,9 @@ const useStore = create((set) => ({
   task: [{ title: "Kanban", state: "Berjalan" }],
   addTask: (title, state) => {
     set((store) => ({ task: [...store.task, { title, state }] }));
-    // console.log('Adding task:', title, state); 
+  },
+  deleteTask: (title) => {
+    set((store) => ({ task: store.task.filter((task)=> task.title !== title) }));
   }
 }));
 
